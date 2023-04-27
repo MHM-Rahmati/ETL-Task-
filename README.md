@@ -9,7 +9,7 @@ This task is totally about:<br />
 To Develop and test the task, I used :
 
 -Programing language: Python 3.8<br />
--OS: Ubuntu 18<br />
+-OS: Ubuntu 22<br />
 and PyCharm IDEA Community Edition<br />
 
 # About project
@@ -45,7 +45,6 @@ schedule.run_pending()
 |            |--->dbUtils
 |            |--->utils
 |            |--->config (set initial values like PATH)
-|--->data (possible inputs/outputs)
 |--->Docs (include **result.png** )
 |--->docker-compose.yml
 </pre>
@@ -54,18 +53,10 @@ schedule.run_pending()
 2. It is better to extend dbUtils as a standard package and make **analytics.py** cleaner.
 3. With generating dimension (with DIM tables), we can access to some more statistics quickly, like the number of unique devices, which device is turned off (unexpectedly), etc.
 # How to run 
-I had to manage the docker because of some fatal error. So, At first, I did the steps listed below:
+I had to manage the docker because of some fatal error. So, I did the steps listed below:
 1. Change Python:3-slim to Python:3.8-slim
-2. Change MySQL configuration:
-```
-sudo docker exec -it [container_name] bash
-mysql -u [username] -p [password]
-CREATE USER 'root'@'%' IDENTIFIED BY [password]
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION
-```
-3. Cahnge dockerfile headers and add some new libraries like **cryptography**
-
-4. Finally, I used this command to run: ``` sudo docker-compose up --build ```
+2. Cahnge dockerfile headers and add some new libraries like **cryptography**
+3. Finally, I used this command to run: ``` sudo docker-compose up --build ```
 
 # Output
-**Images are sored in docs directory**
+**Images are stored in docs directory**
