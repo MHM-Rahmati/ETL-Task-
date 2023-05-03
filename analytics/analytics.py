@@ -1,4 +1,4 @@
-# Standard lib -> Third parties lib -> Local lib
+# Standard lib -> Third parties lib -> Local lib 
 from os import environ
 from time import sleep
 from sys import exit
