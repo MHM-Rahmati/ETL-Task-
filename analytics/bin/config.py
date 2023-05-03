@@ -13,5 +13,6 @@ queries = {
     "EXTRACT_QUERY": """SELECT * 
                       FROM devices 
                       WHERE time::bigint >= EXTRACT(EPOCH FROM (NOW() AT TIME ZONE 'UTC' - INTERVAL '1 hour'));""",
-    "INSERT_QUERY": "INSERT INTO  analytics.DE_Table_Task (time ,device_id ,max_temperature ,data_points, total_distance) VALUES"
+    "INSERT_QUERY": "INSERT INTO  analytics.DE_Table_Task \
+                    (time ,device_id ,max_temperature ,data_points, total_distance) VALUES"
 }
