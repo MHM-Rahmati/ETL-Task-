@@ -42,7 +42,6 @@ schedule.run_pending()
 |     |--->Dockerfile
 |     |--->analytics.py
 |     |--->bin
-|            |--->dbUtils
 |            |--->utils
 |            |--->config (set initial values like PATH)
 |--->Docs (include **result.png** )
@@ -50,7 +49,6 @@ schedule.run_pending()
 </pre>
 # Future improvement
 1. To improve monitoring, we can use **logger** library and insert logs into a database.
-2. It is better to extend dbUtils as a standard package and make **analytics.py** cleaner.
 3. With generating dimension (with DIM tables), we can access to some more statistics quickly, like the number of unique devices, which device is turned off (unexpectedly), etc.
 # How to run 
 I had to manage the docker because of some fatal error. So, I did the steps listed below:
